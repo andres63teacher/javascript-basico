@@ -46,7 +46,7 @@
         
         <input id="inpt" type="text" >
        
-        <button id="btn1">PROCESAR</button>
+        <button id="btn1" onclick="procesar()">PROCESAR</button>
     </article>
 
     <article class="centrado" id="salidaDatos">
@@ -60,8 +60,33 @@
    </section>
 
 
-</div> 
+</div>
     
+<script>
+
+ /*  Entrada y salida de datos  */
+
+    function procesar(){
+        //alert("Hola Mundo");
+
+        let numero=12;
+
+        let resultado="<p> Esto es un "+numero+" </p>";
+
+        document.getElementById("salidaDatos").innerHTML=resultado;
+
+
+    }
+
+
+
+
+</script>
 </body>
 
 </html>
+
+
+
+
+
