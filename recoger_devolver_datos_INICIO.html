@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   .contenedor {width: 30%;
+    min-height: 15rem;
+                background-color: aqua;}
+
+    .centrado  {margin: 0 auto;}
+
+    section {min-height: 12rem;
+              background-color: blue;}
+
+    section:first-child {display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        }
+
+    article {width: 45%;
+            height: 3rem;
+            background-color: rgb(196, 231, 161);
+            margin-top: 1.2;}
+
+    article:first-child {display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        align-items: center;
+                        padding: 1rem;
+
+
+    }
+    button, input {width: 7rem;}
+
+  
+
+    </style>
+</head>
+<body>
+<div class="contenedor centrado">
+   <section>
+ 
+    <article class="centrado" id="entradaDatos">
+        
+        <input id="inpt" type="text" >
+       
+        <button id="btn1">PROCESAR</button>
+    </article>
+
+    <article class="centrado" id="salidaDatos">
+
+
+
+
+    </article>
+
+
+   </section>
+
+
+</div> 
+    
+</body>
+
+</html>
