@@ -44,7 +44,7 @@
  
     <article class="centrado" id="entradaDatos">
         
-        <input id="inpt" type="text" >
+        <input id="inpt" type="number" >
        
         <button id="btn1" onclick="procesar()">PROCESAR</button>
     </article>
@@ -66,12 +66,22 @@
 
  /*  Entrada y salida de datos  */
 
+   const entradaDatos=document.querySelector("#inpt");
+
     function procesar(){
+
+        let valorEntrada= entradaDatos.value;
+         
+          //  alert(valorEntrada);
+
+         valorEntradaNumero=parseInt(valorEntrada);
         //alert("Hola Mundo");
 
-        let numero=12;
 
-        let resultado="<p> Esto es un "+numero+" </p>";
+
+        let numero=12 + valorEntradaNumero;
+
+        let resultado=`<p> Esto es un ${numero} </p>`;
 
         document.getElementById("salidaDatos").innerHTML=resultado;
 
@@ -92,7 +102,16 @@
 Javascript es una lenguaje de tipado dinamico, no se declara el tipo de dato cuando se crea (String, Integer, Float, Boolean..)
 Esta situacion permite una sintaxis mas accesible pero plantea carencias que pueden crear errores. Por ese motivo se creo Typescript.
 */
+/*   PRIMERA PARTE del codigo de Javacript
+- querySelector(DOM) => Metodo que "recoje/señala" un elemento del HTML,a traves de su selector css. Hay que colocar el elemento css que lo identifique.
+  Para clase, etiqueto o id ".principal", "main div p", "#inpt1".
+- const  => Palabra reservada que permite declarar una constante. Aunque tambien es utilizada para variales complejas, como objetos del DOM, colecciones de listas
+  como arrays  objetos literales.
+- value  => Es un atributo del objeto del DOM, que señala una etiqueta de formulario
+- 
 
+
+*/
 
 </script>
 </body>

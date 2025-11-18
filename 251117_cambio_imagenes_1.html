@@ -5,18 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <img id="imagen" src="lekumberri-navarra.jpg" alt="">
-    <button>CAMBIAR</button>
+  
 </head>
 <body>
-    
+    <img id="imagen" src="img/lekumberri-navarra.jpg" onmouseover="entrar()" onmouseout="salir()">
+    <button  onclick="cambiar()">CAMBIAR</button>
+
+
+
+
+    <script>
+       const fotoNavarra=document.querySelector("#imagen");
+
+       function entrar(){
+         
+        fotoNavarra.setAttribute("src","img/ujue-navarra.jpg");
+
+       }
+       
+       function salir(){
+
+        fotoNavarra.setAttribute("src","img/lekumberri-navarra.jpg");
+
+       }
+         const boton=document.querySelector("button");
+       
+        function cambiar(){
+
+
+
+            
+        }
+
+
+    </script>
 </body>
-
-
-
-
-
-
-
-
 </html>
