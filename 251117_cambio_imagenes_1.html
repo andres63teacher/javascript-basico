@@ -11,7 +11,7 @@
     <img id="imagen" src="img/lekumberri-navarra.jpg" onmouseover="entrar()" onmouseout="salir()">
 
    
-    <!-- <button  onclick="cambiar()">CAMBIAR</button> -->
+    <!--// A Evento desde Etiqueta <button  onclick="cambiar()">CAMBIAR</button> -->
 
     <button id="btn1">CAMBIAR</button>
 
@@ -35,12 +35,18 @@
 
         const boton=document.querySelector("button");
 
-        boton.addEventListener("click", cambiar);
-       
+        // B - Evento desde metodo addEventListener()
+        boton.addEventListener("click", cambiar, true);
+
+        // C - Evento desde metodo del objeto. Tambien podemos desplegar el metodo onclick desde el objeto del DOM,y asignarle una funcion.
+        //boton.onclick=cambiar;
+
 
         function cambiar(event){
-
-            console.log(event);
+            
+            // Podemos pedirle al objeto event, que "capture" algun elemento del evento y que
+            // lo publique o almacene en una variable
+            console.log(event.target.id);
 
            let imagenActual=fotoNavarra.getAttribute("src");
 
