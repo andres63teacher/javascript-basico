@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html>
+
 <body>
 
-<h2>Store and retrieve data from local storage.</h2>
-<p id="demo"></p>
-<div id="muestra">  </div>
-<script>
+    <h2>Store and retrieve data from local storage.Page 1</h2>
+    <p id="demo"></p>
+    <div id="muestra"> </div>
+    <script>
+        const personaObjeto = {
+            nombre: "Carlos",
+            edad: 34,
+            coche: true
+
+        }
+
+        const personaJSON = JSON.stringify(personaObjeto);
+        
+        
+        //alert(typeof(personaObjeto));
+        //alert(typeof(personaJSON));
+
+
+        localStorage.setItem("claveRecuperacion002", personaJSON);
 
 
 
-</script>
+
+    </script>
 
 </body>
-</html>
 
+</html>

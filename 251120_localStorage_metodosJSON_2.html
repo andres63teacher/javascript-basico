@@ -2,12 +2,32 @@
 <html>
 <body>
 
-<h2>Store and retrieve data from local storage.</h2>
+<h2>Store and retrieve data from local storage.Page - 2</h2>
 <p id="demo"></p>
 <div id="muestra">  </div>
+
+
+
 <script>
 
+const objeto2JSON=localStorage.getItem("claveRecuperacion002");
 
+//alert(objeto2JSON);
+
+
+const objeto2Javascript= JSON.parse(objeto2JSON);
+
+//alert(objeto2Javascript);
+
+const parrafo=document.getElementById("demo")
+
+parrafo.innerHTML=objeto2Javascript.nombre;
+
+const cajaDiv=document.getElementById("muestra");
+ cajaDiv.innerHTML=objeto2Javascript["edad"];
+
+
+ localStorage.clear();
 
 </script>
 
