@@ -6,13 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+
+      /* 1 - reset   */
+
+   * {margin: 0;
+         padding: 0;}
+      
+      ul {list-style: none;
+          margin-left: 0;}
+
+      a {text-decoration: none;
+         color: #210303;}
+
+
+      /* 2 -codigo pagina   */
    .contenedor {width: 30%;
     min-height: 15rem;
                 background-color: aqua;}
 
     .centrado  {margin: 0 auto;}
 
-    section {min-height: 12rem;
+    section {min-height: 25rem;
               background-color: rgb(131, 170, 69);}
 
     section:first-child {display: flex;
@@ -97,6 +111,7 @@
                     }
                            */
                    // 3- FOR IN en Objetos
+                   /*
                     const persona= {nombre: "Carlos",
                                     edad: 34,
                                     coche:true
@@ -111,6 +126,23 @@
                     }
 
                     // result=frutas[1];
+                */
+                 // 4- FOREACH en Arrays. Recorre arrays de elementos array.foreach(function(value, index, array){ CODIGO })
+                 //https://4geeks.com/es/how-to/metodo-foreach-javascript
+ 
+                 result+="<ul>";
+                  
+                 frutas.forEach(function(valor, indice) {           // Funcion clasica
+                 // frutas.forEach((valor, indice) => {             // Funcion flecha
+              
+
+                    
+                           result+=`<li> El indice ${indice} refleja la fruta ${valor} </li>`;
+
+                    });
+       
+                 result+="</ul>"
+
 
             cajaSalida.innerHTML=result;
      }
