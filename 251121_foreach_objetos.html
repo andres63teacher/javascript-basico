@@ -25,7 +25,7 @@
         }
 
         .card {
-            width: 25%;
+            width: 22%;
             min-height: 3rem;
             display: flex;
             flex-direction: column;
@@ -51,7 +51,7 @@
 
     <script>
 
-        const cajaSalida = document.querySelector("div");
+        const cajaSalida = document.querySelector("section");
 
         //1 - BUCLE FOREACH  --Array- 
 
@@ -73,9 +73,59 @@
                                           "Descripcion":"Nivel alto"},
                                         {"nombre": "Pedro", 
                                           "edad":23, 
+                                          "Descripcion":"Nivel medio"},
+                                          {"nombre": "Sofia", 
+                                          "edad":39, 
+                                          "Descripcion":"Nivel alto"},
+                                        {"nombre": "Pedro", 
+                                          "edad":23, 
                                           "Descripcion":"Nivel medio"}] `
 
+            //let result="";
 
+            const participantes=JSON.parse(participantesJSON);
+            
+
+               participantes.forEach(function(participante){   
+                      
+
+
+                let card=document.createElement("article");
+
+                let titulo=document.createElement("h4")
+
+
+                let parrafo=document.createElement("p");
+
+                let tituloTexto=document.createTextNode(participante.nombre);
+
+
+                let parrafoTexto=document.createTextNode(participante.edad);
+                
+                titulo.appendChild(tituloTexto);
+                parrafo.appendChild(parrafoTexto);
+                card.appendChild(titulo);
+                card.appendChild(parrafo);
+                card.classList.add("card");
+
+                cajaSalida.appendChild(card);
+
+
+
+
+                /*result+=`<article class="card">   
+
+                           <h4>   ${participante.nombre}  </h4>
+
+                              <p>   ${participante.edad }  </p>
+
+                         </article>`
+                */
+
+               });
+
+               //cajaSalida.innerHTML=result;
+                                           
         }
 
 
