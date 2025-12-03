@@ -68,27 +68,27 @@
 
             // alert("hola");
 
-            const participantesJSON = `[{"nombre": "Sofia", 
+            const participantesJSON = `[{"id":1, "nombre": "Sofia", 
                                           "edad":39, 
                                           "Descripcion":"Nivel alto"},
-                                        {"nombre": "Pedro", 
+                                        {"id":2, "nombre": "Pedro", 
                                           "edad":23, 
                                           "Descripcion":"Nivel medio"},
-                                          {"nombre": "Sofia", 
+                                          {"id":3, "nombre": "Sofia", 
                                           "edad":39, 
                                           "Descripcion":"Nivel alto"},
-                                        {"nombre": "Pedro", 
+                                        {"id":4, "nombre": "Pedro", 
                                           "edad":23, 
                                           "Descripcion":"Nivel medio"}] `
 
-            //let result="";
+            let result="";
 
             const participantes=JSON.parse(participantesJSON);
             
 
                participantes.forEach(function(participante){   
                       
-
+              /*
 
                 let card=document.createElement("article");
 
@@ -110,25 +110,38 @@
 
                 cajaSalida.appendChild(card);
 
+              */
 
 
-
-                /*result+=`<article class="card">   
+                result+=`<article class="card">   
 
                            <h4>   ${participante.nombre}  </h4>
 
                               <p>   ${participante.edad }  </p>
-                              <button>CARRITO </button>
+                              <button class"botonCarrito" id=${participante.id} onclick="carrito(${participante.id})"> CARRITO </button>
                          </article>`
-                */
+                
+              
 
                });
 
-               //cajaSalida.innerHTML=result;
+               cajaSalida.innerHTML=result;
+
+
+            
                                            
         }
+        
+
+           function carrito(id) {
+
+              alert(id);
 
 
+
+           }
+
+            
      
 
     </script>
