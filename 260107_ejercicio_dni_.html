@@ -50,19 +50,21 @@
 
      console.log(valor);
 
-     let numero=valor.slice(0,8);
+     let numero=valor.slice(0, valor.length - 1);
 
          numero=parseInt(numero);
       
-     let letra=valor.charAt(8).toUpperCase();
+     let letra=valor.charAt(valor.length - 1).toUpperCase();
 
     
      alert(letra);
 
 
 
-
-        if(numero>99999999 && numero>0){alert("numero fuera de rango")}
+         
+                  
+                  
+      if(numero>99999999 || numero<0){ alert("numero fuera de rango")}
         else {   
 
       let resto= numero%23;

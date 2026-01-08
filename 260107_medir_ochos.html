@@ -7,8 +7,7 @@
     <title>Document</title>
     <!--  La prueba tecnica consistió en resolver el siguiente enunciado: 
       "crea una función que reciba un número como parámetro de entrada y te devuelva un entero que 
-    represente el número de círculos que contiene el parámetro de entrada (que es un numero, 
-    posiblemente de varias cifras)"  -->
+    represente el número de círculos que contiene el parámetro de entrada (que es un numero, posiblemente de varias cifras)"  -->
 </head>
 
 <body>
@@ -20,6 +19,46 @@
 
 
     <script>
+        const caja = document.getElementById("inpt1");
+        const boton = document.querySelector("#btn1");
+        const cajaSalida=document.querySelector("#demo");
+        boton.addEventListener("click", medirCirculos);
+
+        function medirCirculos() {
+            let numero = caja.value;
+
+            let arrayNumerico = numero.split("");
+            let contador = 0;
+            for (let item of arrayNumerico) {
+
+
+                switch (item) {
+                    case "0":
+                        contador++;
+                        break;
+                    case "6":
+                        contador++;
+                        break;
+                    case "8":
+                        contador += 2;
+                        break;
+                    case "9":
+                        contador++;
+                        break;
+                    default:
+                        break;
+                }
+
+            }
+
+          cajaSalida.innerHTML=contador;
+
+
+        }
+
+        
+
+
 
 
     </script>

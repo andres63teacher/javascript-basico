@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pedido Pizzeria</title>
+<!--     
+  El mensaje final tendra el siguiente texto
+  "La pizza va a tener x  y  z 
+  con los ingredientes que tenemos a continuacion mñqw"`
+  
+      - "masa gruesa"
+      -, "base de queso", 
+      - "lista de ingredientes"
+
+      
+-
+
+-->
+    <style>
+      #uno {
+        display: flex;
+      }
+      #uno div {
+        display: flex;
+        flex-direction: column;
+      }
+      #uno div:first-child {
+        height: 20vh;
+      }
+      #uno div:nth-child(2) {
+        height: 80vh;
+      }
+
+      select {
+        width: 14rem;
+      }
+
+      img {  border: 0.3rem solid black;
+        border-radius: 1.15rem;}
+
+        #dos {margin-top: 3rem;}
+
+        #dos {
+        display: flex;
+        
+        
+      }
+      #muestra {width: 40%;}
+      #dos div {
+        display: flex;
+        flex-direction: column;
+        padding: 0.3rem;
+      }
+      #dos div:first-child {
+        height: 20vh;
+        width: 40% ;
+      }
+      #dos div:nth-child(2) {
+        height: 80vh;
+      }
+      #boton {width: 16rem;
+       
+    }
+      .verde {font-size: 1.5rem;
+               color: rgb(87, 213, 87)}
+      .azul {font-size: 0.8rem;
+               color: rgb(116, 147, 190)}
+
+
+        button {margin: 0.2rem;
+                font-size: 1.5rem;
+                width: 17rem;
+            }
+            #pedido  {font-size: 2.3rem;}
+    </style>
+  </head>
+  <body>
+  <div id="root"> 
+    <section id="uno">
+   
+    <img src="img/pizza.jpg" width="60%" />
+    <div>
+      <div>
+
+        <button id="pedido">Pedido Pizza</button>
+     
+      </div>
+     <div id="ingredientes">
+          <button>Espinacas</button>
+          <button>Pimiento Verde</button>
+          <button>Pimiento Rojo</button>
+          <button>Bacon</button>
+          <button>Anchoas</button>
+          <button>Mozarella</button>
+          <button>Champiñones</button>
+          <button>Pepinillos</button>
+          <button>Comino</button>
+
+     </div>
+      <div id="mensaje">Mensaje de salida</div>
+    </div>
+  </div>
+ </section>
+  <section id="dos">
+   <!-- <img src="imagenes/pizza.jpg" width="55%" /> --> 
+    <div id="muestra">  
+    <button id="boton">Unir Personajes</button>
+    <div id="mensaje2"></div>
+    <div id="mensaje3"></div>
+    </div>
+
+  </section>
+  
+    <script>
+    
+
+    </script>
+  </body>
+</html>
